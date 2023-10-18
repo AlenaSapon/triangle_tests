@@ -21,6 +21,10 @@ public class TriangleTypeTest {
                         {5, 6, 7, "Scalene"},
                         {1, 5, 5, "Isosceles"},
                         {20, 20, 20, "Equilateral"},
+                        {100, 100, 200, "Generated"},
+                        {50, 3, 2, null},
+                        {20, 2, 0, null},
+                        {-20, 2, 0, null},
                 });
     }
 

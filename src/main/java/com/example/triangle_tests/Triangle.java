@@ -12,7 +12,7 @@ public class Triangle {
             System.out.println("The sides of the triangle must be greater 0.");
         } else if (a + b < c && a + c < b && b + c < a) {
             System.out.println("Triangle doesn't exist.");
-        } else if (a + b > c && a + c > b && b + c > a) {
+        } else if (a + b >= c && a + c >= b && b + c >= a) {
             System.out.println("Triangle exists.");
             triangleExist = true;
         }
@@ -25,13 +25,19 @@ public class Triangle {
             if (a == b && a == c) {
                 System.out.println("Triangle is Equilateral.");
                 type = "Equilateral";
+            } else if (a + b == c || a + c == b || b + c == a) {
+                System.out.println("Triangle is Generated.");
+                type = "Generated";
             } else {
                 System.out.println("Triangle is Isosceles.");
                 type = "Isosceles";
             }
-        } else {
+        } else if (a + b > c && a + c > b && b + c > a) {
             System.out.println("Triangle is Scalene.");
             type = "Scalene";
+        } else {
+            System.out.println("No triangle");
+            type = null;
         }
         return type;
     }
